@@ -1,0 +1,5 @@
+[book]
+title = "You don't know JS"
+authors = ["getify"]
+multilingual = false
+src = "."
