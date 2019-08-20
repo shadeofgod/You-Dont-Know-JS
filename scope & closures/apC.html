@@ -1,0 +1,293 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Appendix C: Lexical-this - You don't know JS</title>
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body class="light">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li><a href="../index.html"><strong aria-hidden="true">1.</strong> README</a></li><li><a href="../preface.html"><strong aria-hidden="true">2.</strong> Preface</a></li><li><a href="../up & going/toc.html"><strong aria-hidden="true">3.</strong> Up &amp; Going</a></li><li><ol class="section"><li><a href="../up & going/foreword.html"><strong aria-hidden="true">3.1.</strong> Foreword</a></li><li><a href="../up & going/ch1.html"><strong aria-hidden="true">3.2.</strong> Chapter 1: Into Programming</a></li><li><a href="../up & going/ch2.html"><strong aria-hidden="true">3.3.</strong> Chapter 2: Into JavaScript</a></li><li><a href="../up & going/ch3.html"><strong aria-hidden="true">3.4.</strong> Chapter 3: Into YDKJS</a></li><li><a href="../up & going/apA.html"><strong aria-hidden="true">3.5.</strong> Appendix A: Thank You's!</a></li></ol></li><li><a href="../scope & closures/toc.html"><strong aria-hidden="true">4.</strong> Scope &amp; Closures</a></li><li><ol class="section"><li><a href="../scope & closures/ch1.html"><strong aria-hidden="true">4.1.</strong> Chapter 1: What is Scope?</a></li><li><a href="../scope & closures/ch2.html"><strong aria-hidden="true">4.2.</strong> Chapter 2: Lexical Scope</a></li><li><a href="../scope & closures/ch3.html"><strong aria-hidden="true">4.3.</strong> Chapter 3: Function vs. Block Scope</a></li><li><a href="../scope & closures/ch4.html"><strong aria-hidden="true">4.4.</strong> Chapter 4: Hoisting</a></li><li><a href="../scope & closures/ch5.html"><strong aria-hidden="true">4.5.</strong> Chapter 5: Scope Closures</a></li><li><a href="../scope & closures/apA.html"><strong aria-hidden="true">4.6.</strong> Appendix A: Dynamic Scope</a></li><li><a href="../scope & closures/apB.html"><strong aria-hidden="true">4.7.</strong> Appendix B: Polyfilling Block Scope</a></li><li><a href="../scope & closures/apC.html" class="active"><strong aria-hidden="true">4.8.</strong> Appendix C: Lexical-this</a></li><li><a href="../scope & closures/apD.html"><strong aria-hidden="true">4.9.</strong> Appendix D: Thank You's!</a></li></ol></li><li><a href="../this & object prototypes/toc.html"><strong aria-hidden="true">5.</strong> this &amp; Object Prototypes</a></li><li><ol class="section"><li><a href="../this & object prototypes/foreword.html"><strong aria-hidden="true">5.1.</strong> Foreword</a></li><li><a href="../this & object prototypes/ch1.html"><strong aria-hidden="true">5.2.</strong> Chapter 1: this Or That?</a></li><li><a href="../this & object prototypes/ch2.html"><strong aria-hidden="true">5.3.</strong> Chapter 2: this All Makes Sense Now!</a></li><li><a href="../this & object prototypes/ch3.html"><strong aria-hidden="true">5.4.</strong> Chapter 3: Objects</a></li><li><a href="../this & object prototypes/ch4.html"><strong aria-hidden="true">5.5.</strong> Chapter 4: Mixing (Up) &quot;Class&quot; Objects</a></li><li><a href="../this & object prototypes/ch5.html"><strong aria-hidden="true">5.6.</strong> Chapter 5: Prototypes</a></li><li><a href="../this & object prototypes/ch6.html"><strong aria-hidden="true">5.7.</strong> Chapter 6: Behavior Delegation</a></li><li><a href="../this & object prototypes/apA.html"><strong aria-hidden="true">5.8.</strong> Appendix A: ES6 class</a></li><li><a href="../this & object prototypes/apB.html"><strong aria-hidden="true">5.9.</strong> Appendix B: Thank You's!</a></li></ol></li><li><a href="../types & grammar/toc.html"><strong aria-hidden="true">6.</strong> Types &amp; Grammar</a></li><li><ol class="section"><li><a href="../types & grammar/foreword.html"><strong aria-hidden="true">6.1.</strong> Foreword</a></li><li><a href="../types & grammar/ch1.html"><strong aria-hidden="true">6.2.</strong> Chapter 1: Types</a></li><li><a href="../types & grammar/ch2.html"><strong aria-hidden="true">6.3.</strong> Chapter 2: Values</a></li><li><a href="../types & grammar/ch3.html"><strong aria-hidden="true">6.4.</strong> Chapter 3: Natives</a></li><li><a href="../types & grammar/ch4.html"><strong aria-hidden="true">6.5.</strong> Chapter 4: Coercion</a></li><li><a href="../types & grammar/ch5.html"><strong aria-hidden="true">6.6.</strong> Chapter 5: Grammar</a></li><li><a href="../types & grammar/apA.html"><strong aria-hidden="true">6.7.</strong> Appendix A: Mixed Environment JavaScript</a></li><li><a href="../types & grammar/apB.html"><strong aria-hidden="true">6.8.</strong> Appendix B: Thank You's!</a></li></ol></li><li><a href="../async & performance/toc.html"><strong aria-hidden="true">7.</strong> Async &amp; Performance</a></li><li><ol class="section"><li><a href="../async & performance/foreword.html"><strong aria-hidden="true">7.1.</strong> Foreword</a></li><li><a href="../async & performance/ch1.html"><strong aria-hidden="true">7.2.</strong> Chapter 1: Asynchrony: Now &amp; Later</a></li><li><a href="../async & performance/ch2.html"><strong aria-hidden="true">7.3.</strong> Chapter 2: Callbacks</a></li><li><a href="../async & performance/ch3.html"><strong aria-hidden="true">7.4.</strong> Chapter 3: Promises</a></li><li><a href="../async & performance/ch4.html"><strong aria-hidden="true">7.5.</strong> Chapter 4: Generators</a></li><li><a href="../async & performance/ch5.html"><strong aria-hidden="true">7.6.</strong> Chapter 5: Program Performance</a></li><li><a href="../async & performance/ch6.html"><strong aria-hidden="true">7.7.</strong> Chapter 6: Benchmarking &amp; Tuning</a></li><li><a href="../async & performance/apA.html"><strong aria-hidden="true">7.8.</strong> Appendix A: Library: asynquence</a></li><li><a href="../async & performance/apB.html"><strong aria-hidden="true">7.9.</strong> Appendix B: Advanced Async Patterns</a></li><li><a href="../async & performance/apC.html"><strong aria-hidden="true">7.10.</strong> Appendix C: Thank You's!</a></li></ol></li><li><a href="../es6 & beyond/toc.html"><strong aria-hidden="true">8.</strong> ES6 &amp; Beyond</a></li><li><ol class="section"><li><a href="../es6 & beyond/foreword.html"><strong aria-hidden="true">8.1.</strong> Foreword</a></li><li><a href="../es6 & beyond/ch1.html"><strong aria-hidden="true">8.2.</strong> Chapter 1: ES? Now &amp; Future</a></li><li><a href="../es6 & beyond/ch2.html"><strong aria-hidden="true">8.3.</strong> Chapter 2: Syntax</a></li><li><a href="../es6 & beyond/ch3.html"><strong aria-hidden="true">8.4.</strong> Chapter 3: Organization</a></li><li><a href="../es6 & beyond/ch4.html"><strong aria-hidden="true">8.5.</strong> Chapter 4: Async Flow Control</a></li><li><a href="../es6 & beyond/ch5.html"><strong aria-hidden="true">8.6.</strong> Chapter 5: Collections</a></li><li><a href="../es6 & beyond/ch6.html"><strong aria-hidden="true">8.7.</strong> Chapter 6: API Additions</a></li><li><a href="../es6 & beyond/ch7.html"><strong aria-hidden="true">8.8.</strong> Chapter 7: Meta Programming</a></li><li><a href="../es6 & beyond/ch8.html"><strong aria-hidden="true">8.9.</strong> Chapter 8: Beyond ES6</a></li><li><a href="../es6 & beyond/apA.html"><strong aria-hidden="true">8.10.</strong> Appendix A: Thank You's!</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">You don't know JS</h1>
+
+                        <div class="right-buttons">
+                            <a href="../print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#you-dont-know-js-scope--closures" id="you-dont-know-js-scope--closures">You Don't Know JS: Scope &amp; Closures</a></h1>
+<h1><a class="header" href="#appendix-c-lexical-this" id="appendix-c-lexical-this">Appendix C: Lexical-this</a></h1>
+<p>Though this title does not address the <code>this</code> mechanism in any detail, there's one ES6 topic which relates <code>this</code> to lexical scope in an important way, which we will quickly examine.</p>
+<p>ES6 adds a special syntactic form of function declaration called the &quot;arrow function&quot;. It looks like this:</p>
+<pre><code class="language-js">var foo = a =&gt; {
+	console.log( a );
+};
+
+foo( 2 ); // 2
+</code></pre>
+<p>The so-called &quot;fat arrow&quot; is often mentioned as a short-hand for the <em>tediously verbose</em> (sarcasm) <code>function</code> keyword.</p>
+<p>But there's something much more important going on with arrow-functions that has nothing to do with saving keystrokes in your declaration.</p>
+<p>Briefly, this code suffers a problem:</p>
+<pre><code class="language-js">
+var obj = {
+	id: &quot;awesome&quot;,
+	cool: function coolFn() {
+		console.log( this.id );
+	}
+};
+
+var id = &quot;not awesome&quot;;
+
+obj.cool(); // awesome
+
+setTimeout( obj.cool, 100 ); // not awesome
+</code></pre>
+<p>The problem is the loss of <code>this</code> binding on the <code>cool()</code> function. There are various ways to address that problem, but one often-repeated solution is <code>var self = this;</code>.</p>
+<p>That might look like:</p>
+<pre><code class="language-js">var obj = {
+	count: 0,
+	cool: function coolFn() {
+		var self = this;
+
+		if (self.count &lt; 1) {
+			setTimeout( function timer(){
+				self.count++;
+				console.log( &quot;awesome?&quot; );
+			}, 100 );
+		}
+	}
+};
+
+obj.cool(); // awesome?
+</code></pre>
+<p>Without getting too much into the weeds here, the <code>var self = this</code> &quot;solution&quot; just dispenses with the whole problem of understanding and properly using <code>this</code> binding, and instead falls back to something we're perhaps more comfortable with: lexical scope. <code>self</code> becomes just an identifier that can be resolved via lexical scope and closure, and cares not what happened to the <code>this</code> binding along the way.</p>
+<p>People don't like writing verbose stuff, especially when they do it over and over again. So, a motivation of ES6 is to help alleviate these scenarios, and indeed, <em>fix</em> common idiom problems, such as this one.</p>
+<p>The ES6 solution, the arrow-function, introduces a behavior called &quot;lexical this&quot;.</p>
+<pre><code class="language-js">var obj = {
+	count: 0,
+	cool: function coolFn() {
+		if (this.count &lt; 1) {
+			setTimeout( () =&gt; { // arrow-function ftw?
+				this.count++;
+				console.log( &quot;awesome?&quot; );
+			}, 100 );
+		}
+	}
+};
+
+obj.cool(); // awesome?
+</code></pre>
+<p>The short explanation is that arrow-functions do not behave at all like normal functions when it comes to their <code>this</code> binding. They discard all the normal rules for <code>this</code> binding, and instead take on the <code>this</code> value of their immediate lexical enclosing scope, whatever it is.</p>
+<p>So, in that snippet, the arrow-function doesn't get its <code>this</code> unbound in some unpredictable way, it just &quot;inherits&quot; the <code>this</code> binding of the <code>cool()</code> function (which is correct if we invoke it as shown!).</p>
+<p>While this makes for shorter code, my perspective is that arrow-functions are really just codifying into the language syntax a common <em>mistake</em> of developers, which is to confuse and conflate &quot;this binding&quot; rules with &quot;lexical scope&quot; rules.</p>
+<p>Put another way: why go to the trouble and verbosity of using the <code>this</code> style coding paradigm, only to cut it off at the knees by mixing it with lexical references. It seems natural to embrace one approach or the other for any given piece of code, and not mix them in the same piece of code.</p>
+<p><strong>Note:</strong> one other detraction from arrow-functions is that they are anonymous, not named. See Chapter 3 for the reasons why anonymous functions are less desirable than named functions.</p>
+<p>A more appropriate approach, in my perspective, to this &quot;problem&quot;, is to use and embrace the <code>this</code> mechanism correctly.</p>
+<pre><code class="language-js">var obj = {
+	count: 0,
+	cool: function coolFn() {
+		if (this.count &lt; 1) {
+			setTimeout( function timer(){
+				this.count++; // `this` is safe because of `bind(..)`
+				console.log( &quot;more awesome&quot; );
+			}.bind( this ), 100 ); // look, `bind()`!
+		}
+	}
+};
+
+obj.cool(); // more awesome
+</code></pre>
+<p>Whether you prefer the new lexical-this behavior of arrow-functions, or you prefer the tried-and-true <code>bind()</code>, it's important to note that arrow-functions are <strong>not</strong> just about less typing of &quot;function&quot;.</p>
+<p>They have an <em>intentional behavioral difference</em> that we should learn and understand, and if we so choose, leverage.</p>
+<p>Now that we fully understand lexical scoping (and closure!), understanding lexical-this should be a breeze!</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../scope &amp; closures/apB.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../scope &amp; closures/apD.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="../scope &amp; closures/apB.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="../scope &amp; closures/apD.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

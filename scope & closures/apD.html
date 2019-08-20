@@ -1,0 +1,221 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Appendix D: Thank You's! - You don't know JS</title>
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body class="light">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li><a href="../index.html"><strong aria-hidden="true">1.</strong> README</a></li><li><a href="../preface.html"><strong aria-hidden="true">2.</strong> Preface</a></li><li><a href="../up & going/toc.html"><strong aria-hidden="true">3.</strong> Up &amp; Going</a></li><li><ol class="section"><li><a href="../up & going/foreword.html"><strong aria-hidden="true">3.1.</strong> Foreword</a></li><li><a href="../up & going/ch1.html"><strong aria-hidden="true">3.2.</strong> Chapter 1: Into Programming</a></li><li><a href="../up & going/ch2.html"><strong aria-hidden="true">3.3.</strong> Chapter 2: Into JavaScript</a></li><li><a href="../up & going/ch3.html"><strong aria-hidden="true">3.4.</strong> Chapter 3: Into YDKJS</a></li><li><a href="../up & going/apA.html"><strong aria-hidden="true">3.5.</strong> Appendix A: Thank You's!</a></li></ol></li><li><a href="../scope & closures/toc.html"><strong aria-hidden="true">4.</strong> Scope &amp; Closures</a></li><li><ol class="section"><li><a href="../scope & closures/ch1.html"><strong aria-hidden="true">4.1.</strong> Chapter 1: What is Scope?</a></li><li><a href="../scope & closures/ch2.html"><strong aria-hidden="true">4.2.</strong> Chapter 2: Lexical Scope</a></li><li><a href="../scope & closures/ch3.html"><strong aria-hidden="true">4.3.</strong> Chapter 3: Function vs. Block Scope</a></li><li><a href="../scope & closures/ch4.html"><strong aria-hidden="true">4.4.</strong> Chapter 4: Hoisting</a></li><li><a href="../scope & closures/ch5.html"><strong aria-hidden="true">4.5.</strong> Chapter 5: Scope Closures</a></li><li><a href="../scope & closures/apA.html"><strong aria-hidden="true">4.6.</strong> Appendix A: Dynamic Scope</a></li><li><a href="../scope & closures/apB.html"><strong aria-hidden="true">4.7.</strong> Appendix B: Polyfilling Block Scope</a></li><li><a href="../scope & closures/apC.html"><strong aria-hidden="true">4.8.</strong> Appendix C: Lexical-this</a></li><li><a href="../scope & closures/apD.html" class="active"><strong aria-hidden="true">4.9.</strong> Appendix D: Thank You's!</a></li></ol></li><li><a href="../this & object prototypes/toc.html"><strong aria-hidden="true">5.</strong> this &amp; Object Prototypes</a></li><li><ol class="section"><li><a href="../this & object prototypes/foreword.html"><strong aria-hidden="true">5.1.</strong> Foreword</a></li><li><a href="../this & object prototypes/ch1.html"><strong aria-hidden="true">5.2.</strong> Chapter 1: this Or That?</a></li><li><a href="../this & object prototypes/ch2.html"><strong aria-hidden="true">5.3.</strong> Chapter 2: this All Makes Sense Now!</a></li><li><a href="../this & object prototypes/ch3.html"><strong aria-hidden="true">5.4.</strong> Chapter 3: Objects</a></li><li><a href="../this & object prototypes/ch4.html"><strong aria-hidden="true">5.5.</strong> Chapter 4: Mixing (Up) &quot;Class&quot; Objects</a></li><li><a href="../this & object prototypes/ch5.html"><strong aria-hidden="true">5.6.</strong> Chapter 5: Prototypes</a></li><li><a href="../this & object prototypes/ch6.html"><strong aria-hidden="true">5.7.</strong> Chapter 6: Behavior Delegation</a></li><li><a href="../this & object prototypes/apA.html"><strong aria-hidden="true">5.8.</strong> Appendix A: ES6 class</a></li><li><a href="../this & object prototypes/apB.html"><strong aria-hidden="true">5.9.</strong> Appendix B: Thank You's!</a></li></ol></li><li><a href="../types & grammar/toc.html"><strong aria-hidden="true">6.</strong> Types &amp; Grammar</a></li><li><ol class="section"><li><a href="../types & grammar/foreword.html"><strong aria-hidden="true">6.1.</strong> Foreword</a></li><li><a href="../types & grammar/ch1.html"><strong aria-hidden="true">6.2.</strong> Chapter 1: Types</a></li><li><a href="../types & grammar/ch2.html"><strong aria-hidden="true">6.3.</strong> Chapter 2: Values</a></li><li><a href="../types & grammar/ch3.html"><strong aria-hidden="true">6.4.</strong> Chapter 3: Natives</a></li><li><a href="../types & grammar/ch4.html"><strong aria-hidden="true">6.5.</strong> Chapter 4: Coercion</a></li><li><a href="../types & grammar/ch5.html"><strong aria-hidden="true">6.6.</strong> Chapter 5: Grammar</a></li><li><a href="../types & grammar/apA.html"><strong aria-hidden="true">6.7.</strong> Appendix A: Mixed Environment JavaScript</a></li><li><a href="../types & grammar/apB.html"><strong aria-hidden="true">6.8.</strong> Appendix B: Thank You's!</a></li></ol></li><li><a href="../async & performance/toc.html"><strong aria-hidden="true">7.</strong> Async &amp; Performance</a></li><li><ol class="section"><li><a href="../async & performance/foreword.html"><strong aria-hidden="true">7.1.</strong> Foreword</a></li><li><a href="../async & performance/ch1.html"><strong aria-hidden="true">7.2.</strong> Chapter 1: Asynchrony: Now &amp; Later</a></li><li><a href="../async & performance/ch2.html"><strong aria-hidden="true">7.3.</strong> Chapter 2: Callbacks</a></li><li><a href="../async & performance/ch3.html"><strong aria-hidden="true">7.4.</strong> Chapter 3: Promises</a></li><li><a href="../async & performance/ch4.html"><strong aria-hidden="true">7.5.</strong> Chapter 4: Generators</a></li><li><a href="../async & performance/ch5.html"><strong aria-hidden="true">7.6.</strong> Chapter 5: Program Performance</a></li><li><a href="../async & performance/ch6.html"><strong aria-hidden="true">7.7.</strong> Chapter 6: Benchmarking &amp; Tuning</a></li><li><a href="../async & performance/apA.html"><strong aria-hidden="true">7.8.</strong> Appendix A: Library: asynquence</a></li><li><a href="../async & performance/apB.html"><strong aria-hidden="true">7.9.</strong> Appendix B: Advanced Async Patterns</a></li><li><a href="../async & performance/apC.html"><strong aria-hidden="true">7.10.</strong> Appendix C: Thank You's!</a></li></ol></li><li><a href="../es6 & beyond/toc.html"><strong aria-hidden="true">8.</strong> ES6 &amp; Beyond</a></li><li><ol class="section"><li><a href="../es6 & beyond/foreword.html"><strong aria-hidden="true">8.1.</strong> Foreword</a></li><li><a href="../es6 & beyond/ch1.html"><strong aria-hidden="true">8.2.</strong> Chapter 1: ES? Now &amp; Future</a></li><li><a href="../es6 & beyond/ch2.html"><strong aria-hidden="true">8.3.</strong> Chapter 2: Syntax</a></li><li><a href="../es6 & beyond/ch3.html"><strong aria-hidden="true">8.4.</strong> Chapter 3: Organization</a></li><li><a href="../es6 & beyond/ch4.html"><strong aria-hidden="true">8.5.</strong> Chapter 4: Async Flow Control</a></li><li><a href="../es6 & beyond/ch5.html"><strong aria-hidden="true">8.6.</strong> Chapter 5: Collections</a></li><li><a href="../es6 & beyond/ch6.html"><strong aria-hidden="true">8.7.</strong> Chapter 6: API Additions</a></li><li><a href="../es6 & beyond/ch7.html"><strong aria-hidden="true">8.8.</strong> Chapter 7: Meta Programming</a></li><li><a href="../es6 & beyond/ch8.html"><strong aria-hidden="true">8.9.</strong> Chapter 8: Beyond ES6</a></li><li><a href="../es6 & beyond/apA.html"><strong aria-hidden="true">8.10.</strong> Appendix A: Thank You's!</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">You don't know JS</h1>
+
+                        <div class="right-buttons">
+                            <a href="../print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#you-dont-know-js-scope--closures" id="you-dont-know-js-scope--closures">You Don't Know JS: Scope &amp; Closures</a></h1>
+<h1><a class="header" href="#appendix-d-acknowledgments" id="appendix-d-acknowledgments">Appendix D: Acknowledgments</a></h1>
+<p>I have many people to thank for making this book title and the overall series happen.</p>
+<p>First, I must thank my wife Christen Simpson, and my two kids Ethan and Emily, for putting up with Dad always pecking away at the computer. Even when not writing books, my obsession with JavaScript glues my eyes to the screen far more than it should. That time I borrow from my family is the reason these books can so deeply and completely explain JavaScript to you, the reader. I owe my family everything.</p>
+<p>I'd like to thank my editors at O'Reilly, namely Simon St.Laurent and Brian MacDonald, as well as the rest of the editorial and marketing staff. They are fantastic to work with, and have been especially accommodating during this experiment into &quot;open source&quot; book writing, editing, and production.</p>
+<p>Thank you to the many folks who have participated in making this book series better by providing editorial suggestions and corrections, including Shelley Powers, Tim Ferro, Evan Borden, Forrest L. Norvell, Jennifer Davis, Jesse Harlin, and many others. A big thank you to Shane Hudson for writing the Foreword for this title.</p>
+<p>Thank you to the countless folks in the community, including members of the TC39 committee, who have shared so much knowledge with the rest of us, and especially tolerated my incessant questions and explorations with patience and detail. John-David Dalton, Juriy &quot;kangax&quot; Zaytsev, Mathias Bynens, Axel Rauschmayer, Nicholas Zakas, Angus Croll, Reginald Braithwaite, Dave Herman, Brendan Eich, Allen Wirfs-Brock, Bradley Meck, Domenic Denicola, David Walsh, Tim Disney, Peter van der Zee, Andrea Giammarchi, Kit Cambridge, Eric Elliott, and so many others, I can't even scratch the surface.</p>
+<p>The <em>You Don't Know JS</em> book series was born on Kickstarter, so I also wish to thank all my (nearly) 500 generous backers, without whom this book series could not have happened:</p>
+<blockquote>
+<p>Jan Szpila, nokiko, Murali Krishnamoorthy, Ryan Joy, Craig Patchett, pdqtrader, Dale Fukami, ray hatfield, R0drigo Perez [Mx], Dan Petitt, Jack Franklin, Andrew Berry, Brian Grinstead, Rob Sutherland, Sergi Meseguer, Phillip Gourley, Mark Watson, Jeff Carouth, Alfredo Sumaran, Martin Sachse, Marcio Barrios, Dan, AimelyneM, Matt Sullivan, Delnatte Pierre-Antoine, Jake Smith, Eugen Tudorancea, Iris, David Trinh, simonstl, Ray Daly, Uros Gruber, Justin Myers, Shai Zonis, Mom &amp; Dad, Devin Clark, Dennis Palmer, Brian Panahi Johnson, Josh Marshall, Marshall, Dennis Kerr, Matt Steele, Erik Slagter, Sacah, Justin Rainbow, Christian Nilsson, Delapouite, D.Pereira, Nicolas Hoizey, George V. Reilly, Dan Reeves, Bruno Laturner, Chad Jennings, Shane King, Jeremiah Lee Cohick, od3n, Stan Yamane, Marko Vucinic, Jim B, Stephen Collins, Ægir Þorsteinsson, Eric Pederson, Owain, Nathan Smith, Jeanetteurphy, Alexandre ELISÉ, Chris Peterson, Rik Watson, Luke Matthews, Justin Lowery, Morten Nielsen, Vernon Kesner, Chetan Shenoy, Paul Tregoing, Marc Grabanski, Dion Almaer, Andrew Sullivan, Keith Elsass, Tom Burke, Brian Ashenfelter, David Stuart, Karl Swedberg, Graeme, Brandon Hays, John Christopher, Gior, manoj reddy, Chad Smith, Jared Harbour, Minoru TODA, Chris Wigley, Daniel Mee, Mike, Handyface, Alex Jahraus, Carl Furrow, Rob Foulkrod, Max Shishkin, Leigh Penny Jr., Robert Ferguson, Mike van Hoenselaar, Hasse Schougaard, rajan venkataguru, Jeff Adams, Trae Robbins, Rolf Langenhuijzen, Jorge Antunes, Alex Koloskov, Hugh Greenish, Tim Jones, Jose Ochoa, Michael Brennan-White, Naga Harish Muvva, Barkóczi Dávid, Kitt Hodsden, Paul McGraw, Sascha Goldhofer, Andrew Metcalf, Markus Krogh, Michael Mathews, Matt Jared, Juanfran, Georgie Kirschner, Kenny Lee, Ted Zhang, Amit Pahwa, Inbal Sinai, Dan Raine, Schabse Laks, Michael Tervoort, Alexandre Abreu, Alan Joseph Williams, NicolasD, Cindy Wong, Reg Braithwaite, LocalPCGuy, Jon Friskics, Chris Merriman, John Pena, Jacob Katz, Sue Lockwood, Magnus Johansson, Jeremy Crapsey, Grzegorz Pawłowski, nico nuzzaci, Christine Wilks, Hans Bergren, charles montgomery, Ariel בר-לבב Fogel, Ivan Kolev, Daniel Campos, Hugh Wood, Christian Bradford, Frédéric Harper, Ionuţ Dan Popa, Jeff Trimble, Rupert Wood, Trey Carrico, Pancho Lopez, Joël kuijten, Tom A Marra, Jeff Jewiss, Jacob Rios, Paolo Di Stefano, Soledad Penades, Chris Gerber, Andrey Dolganov, Wil Moore III, Thomas Martineau, Kareem, Ben Thouret, Udi Nir, Morgan Laupies, jory carson-burson, Nathan L Smith, Eric Damon Walters, Derry Lozano-Hoyland, Geoffrey Wiseman, mkeehner, KatieK, Scott MacFarlane, Brian LaShomb, Adrien Mas, christopher ross, Ian Littman, Dan Atkinson, Elliot Jobe, Nick Dozier, Peter Wooley, John Hoover, dan, Martin A. Jackson, Héctor Fernando Hurtado, andy ennamorato, Paul Seltmann, Melissa Gore, Dave Pollard, Jack Smith, Philip Da Silva, Guy Israeli, @megalithic, Damian Crawford, Felix Gliesche, April Carter Grant, Heidi, jim tierney, Andrea Giammarchi, Nico Vignola, Don Jones, Chris Hartjes, Alex Howes, john gibbon, David J. Groom, BBox, Yu 'Dilys' Sun, Nate Steiner, Brandon Satrom, Brian Wyant, Wesley Hales, Ian Pouncey, Timothy Kevin Oxley, George Terezakis, sanjay raj, Jordan Harband, Marko McLion, Wolfgang Kaufmann, Pascal Peuckert, Dave Nugent, Markus Liebelt, Welling Guzman, Nick Cooley, Daniel Mesquita, Robert Syvarth, Chris Coyier, Rémy Bach, Adam Dougal, Alistair Duggin, David Loidolt, Ed Richer, Brian Chenault, GoldFire Studios, Carles Andrés, Carlos Cabo, Yuya Saito, roberto ricardo, Barnett Klane, Mike Moore, Kevin Marx, Justin Love, Joe Taylor, Paul Dijou, Michael Kohler, Rob Cassie, Mike Tierney, Cody Leroy Lindley, tofuji, Shimon Schwartz, Raymond, Luc De Brouwer, David Hayes, Rhys Brett-Bowen, Dmitry, Aziz Khoury, Dean, Scott Tolinski - Level Up, Clement Boirie, Djordje Lukic, Anton Kotenko, Rafael Corral, Philip Hurwitz, Jonathan Pidgeon, Jason Campbell, Joseph C., SwiftOne, Jan Hohner, Derick Bailey, getify, Daniel Cousineau, Chris Charlton, Eric Turner, David Turner, Joël Galeran, Dharma Vagabond, adam, Dirk van Bergen, dave ♥♫★ furf, Vedran Zakanj, Ryan McAllen, Natalie Patrice Tucker, Eric J. Bivona, Adam Spooner, Aaron Cavano, Kelly Packer, Eric J, Martin Drenovac, Emilis, Michael Pelikan, Scott F. Walter, Josh Freeman, Brandon Hudgeons, vijay chennupati, Bill Glennon, Robin R., Troy Forster, otaku_coder, Brad, Scott, Frederick Ostrander, Adam Brill, Seb Flippence, Michael Anderson, Jacob, Adam Randlett, Standard, Joshua Clanton, Sebastian Kouba, Chris Deck, SwordFire, Hannes Papenberg, Richard Woeber, hnzz, Rob Crowther, Jedidiah Broadbent, Sergey Chernyshev, Jay-Ar Jamon, Ben Combee, luciano bonachela, Mark Tomlinson, Kit Cambridge, Michael Melgares, Jacob Adams, Adrian Bruinhout, Bev Wieber, Scott Puleo, Thomas Herzog, April Leone, Daniel Mizieliński, Kees van Ginkel, Jon Abrams, Erwin Heiser, Avi Laviad, David newell, Jean-Francois Turcot, Niko Roberts, Erik Dana, Charles Neill, Aaron Holmes, Grzegorz Ziółkowski, Nathan Youngman, Timothy, Jacob Mather, Michael Allan, Mohit Seth, Ryan Ewing, Benjamin Van Treese, Marcelo Santos, Denis Wolf, Phil Keys, Chris Yung, Timo Tijhof, Martin Lekvall, Agendine, Greg Whitworth, Helen Humphrey, Dougal Campbell, Johannes Harth, Bruno Girin, Brian Hough, Darren Newton, Craig McPheat, Olivier Tille, Dennis Roethig, Mathias Bynens, Brendan Stromberger, sundeep, John Meyer, Ron Male, John F Croston III, gigante, Carl Bergenhem, B.J. May, Rebekah Tyler, Ted Foxberry, Jordan Reese, Terry Suitor, afeliz, Tom Kiefer, Darragh Duffy, Kevin Vanderbeken, Andy Pearson, Simon Mac Donald, Abid Din, Chris Joel, Tomas Theunissen, David Dick, Paul Grock, Brandon Wood, John Weis, dgrebb, Nick Jenkins, Chuck Lane, Johnny Megahan, marzsman, Tatu Tamminen, Geoffrey Knauth, Alexander Tarmolov, Jeremy Tymes, Chad Auld, Sean Parmelee, Rob Staenke, Dan Bender, Yannick derwa, Joshua Jones, Geert Plaisier, Tom LeZotte, Christen Simpson, Stefan Bruvik, Justin Falcone, Carlos Santana, Michael Weiss, Pablo Villoslada, Peter deHaan, Dimitris Iliopoulos, seyDoggy, Adam Jordens, Noah Kantrowitz, Amol M, Matthew Winnard, Dirk Ginader, Phinam Bui, David Rapson, Andrew Baxter, Florian Bougel, Michael George, Alban Escalier, Daniel Sellers, Sasha Rudan, John Green, Robert Kowalski, David I. Teixeira (@ditma), Charles Carpenter, Justin Yost, Sam S, Denis Ciccale, Kevin Sheurs, Yannick Croissant, Pau Fracés, Stephen McGowan, Shawn Searcy, Chris Ruppel, Kevin Lamping, Jessica Campbell, Christopher Schmitt, Sablons, Jonathan Reisdorf, Bunni Gek, Teddy Huff, Michael Mullany, Michael Fürstenberg, Carl Henderson, Rick Yoesting, Scott Nichols, Hernán Ciudad, Andrew Maier, Mike Stapp, Jesse Shawl, Sérgio Lopes, jsulak, Shawn Price, Joel Clermont, Chris Ridmann, Sean Timm, Jason Finch, Aiden Montgomery, Elijah Manor, Derek Gathright, Jesse Harlin, Dillon Curry, Courtney Myers, Diego Cadenas, Arne de Bree, João Paulo Dubas, James Taylor, Philipp Kraeutli, Mihai Păun, Sam Gharegozlou, joshjs, Matt Murchison, Eric Windham, Timo Behrmann, Andrew Hall, joshua price, Théophile Villard</p>
+</blockquote>
+<p>This book series is being produced in an open source fashion, including editing and production. We owe GitHub a debt of gratitude for making that sort of thing possible for the community!</p>
+<p>Thank you again to all the countless folks I didn't name but who I nonetheless owe thanks. May this book series be &quot;owned&quot; by all of us and serve to contribute to increasing awareness and understanding of the JavaScript language, to the benefit of all current and future community contributors.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../scope &amp; closures/apC.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../this &amp; object prototypes/toc.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="../scope &amp; closures/apC.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="../this &amp; object prototypes/toc.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

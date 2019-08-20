@@ -1,0 +1,236 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>README - You don't know JS</title>
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body class="light">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li><a href="index.html" class="active"><strong aria-hidden="true">1.</strong> README</a></li><li><a href="preface.html"><strong aria-hidden="true">2.</strong> Preface</a></li><li><a href="up & going/toc.html"><strong aria-hidden="true">3.</strong> Up &amp; Going</a></li><li><ol class="section"><li><a href="up & going/foreword.html"><strong aria-hidden="true">3.1.</strong> Foreword</a></li><li><a href="up & going/ch1.html"><strong aria-hidden="true">3.2.</strong> Chapter 1: Into Programming</a></li><li><a href="up & going/ch2.html"><strong aria-hidden="true">3.3.</strong> Chapter 2: Into JavaScript</a></li><li><a href="up & going/ch3.html"><strong aria-hidden="true">3.4.</strong> Chapter 3: Into YDKJS</a></li><li><a href="up & going/apA.html"><strong aria-hidden="true">3.5.</strong> Appendix A: Thank You's!</a></li></ol></li><li><a href="scope & closures/toc.html"><strong aria-hidden="true">4.</strong> Scope &amp; Closures</a></li><li><ol class="section"><li><a href="scope & closures/ch1.html"><strong aria-hidden="true">4.1.</strong> Chapter 1: What is Scope?</a></li><li><a href="scope & closures/ch2.html"><strong aria-hidden="true">4.2.</strong> Chapter 2: Lexical Scope</a></li><li><a href="scope & closures/ch3.html"><strong aria-hidden="true">4.3.</strong> Chapter 3: Function vs. Block Scope</a></li><li><a href="scope & closures/ch4.html"><strong aria-hidden="true">4.4.</strong> Chapter 4: Hoisting</a></li><li><a href="scope & closures/ch5.html"><strong aria-hidden="true">4.5.</strong> Chapter 5: Scope Closures</a></li><li><a href="scope & closures/apA.html"><strong aria-hidden="true">4.6.</strong> Appendix A: Dynamic Scope</a></li><li><a href="scope & closures/apB.html"><strong aria-hidden="true">4.7.</strong> Appendix B: Polyfilling Block Scope</a></li><li><a href="scope & closures/apC.html"><strong aria-hidden="true">4.8.</strong> Appendix C: Lexical-this</a></li><li><a href="scope & closures/apD.html"><strong aria-hidden="true">4.9.</strong> Appendix D: Thank You's!</a></li></ol></li><li><a href="this & object prototypes/toc.html"><strong aria-hidden="true">5.</strong> this &amp; Object Prototypes</a></li><li><ol class="section"><li><a href="this & object prototypes/foreword.html"><strong aria-hidden="true">5.1.</strong> Foreword</a></li><li><a href="this & object prototypes/ch1.html"><strong aria-hidden="true">5.2.</strong> Chapter 1: this Or That?</a></li><li><a href="this & object prototypes/ch2.html"><strong aria-hidden="true">5.3.</strong> Chapter 2: this All Makes Sense Now!</a></li><li><a href="this & object prototypes/ch3.html"><strong aria-hidden="true">5.4.</strong> Chapter 3: Objects</a></li><li><a href="this & object prototypes/ch4.html"><strong aria-hidden="true">5.5.</strong> Chapter 4: Mixing (Up) &quot;Class&quot; Objects</a></li><li><a href="this & object prototypes/ch5.html"><strong aria-hidden="true">5.6.</strong> Chapter 5: Prototypes</a></li><li><a href="this & object prototypes/ch6.html"><strong aria-hidden="true">5.7.</strong> Chapter 6: Behavior Delegation</a></li><li><a href="this & object prototypes/apA.html"><strong aria-hidden="true">5.8.</strong> Appendix A: ES6 class</a></li><li><a href="this & object prototypes/apB.html"><strong aria-hidden="true">5.9.</strong> Appendix B: Thank You's!</a></li></ol></li><li><a href="types & grammar/toc.html"><strong aria-hidden="true">6.</strong> Types &amp; Grammar</a></li><li><ol class="section"><li><a href="types & grammar/foreword.html"><strong aria-hidden="true">6.1.</strong> Foreword</a></li><li><a href="types & grammar/ch1.html"><strong aria-hidden="true">6.2.</strong> Chapter 1: Types</a></li><li><a href="types & grammar/ch2.html"><strong aria-hidden="true">6.3.</strong> Chapter 2: Values</a></li><li><a href="types & grammar/ch3.html"><strong aria-hidden="true">6.4.</strong> Chapter 3: Natives</a></li><li><a href="types & grammar/ch4.html"><strong aria-hidden="true">6.5.</strong> Chapter 4: Coercion</a></li><li><a href="types & grammar/ch5.html"><strong aria-hidden="true">6.6.</strong> Chapter 5: Grammar</a></li><li><a href="types & grammar/apA.html"><strong aria-hidden="true">6.7.</strong> Appendix A: Mixed Environment JavaScript</a></li><li><a href="types & grammar/apB.html"><strong aria-hidden="true">6.8.</strong> Appendix B: Thank You's!</a></li></ol></li><li><a href="async & performance/toc.html"><strong aria-hidden="true">7.</strong> Async &amp; Performance</a></li><li><ol class="section"><li><a href="async & performance/foreword.html"><strong aria-hidden="true">7.1.</strong> Foreword</a></li><li><a href="async & performance/ch1.html"><strong aria-hidden="true">7.2.</strong> Chapter 1: Asynchrony: Now &amp; Later</a></li><li><a href="async & performance/ch2.html"><strong aria-hidden="true">7.3.</strong> Chapter 2: Callbacks</a></li><li><a href="async & performance/ch3.html"><strong aria-hidden="true">7.4.</strong> Chapter 3: Promises</a></li><li><a href="async & performance/ch4.html"><strong aria-hidden="true">7.5.</strong> Chapter 4: Generators</a></li><li><a href="async & performance/ch5.html"><strong aria-hidden="true">7.6.</strong> Chapter 5: Program Performance</a></li><li><a href="async & performance/ch6.html"><strong aria-hidden="true">7.7.</strong> Chapter 6: Benchmarking &amp; Tuning</a></li><li><a href="async & performance/apA.html"><strong aria-hidden="true">7.8.</strong> Appendix A: Library: asynquence</a></li><li><a href="async & performance/apB.html"><strong aria-hidden="true">7.9.</strong> Appendix B: Advanced Async Patterns</a></li><li><a href="async & performance/apC.html"><strong aria-hidden="true">7.10.</strong> Appendix C: Thank You's!</a></li></ol></li><li><a href="es6 & beyond/toc.html"><strong aria-hidden="true">8.</strong> ES6 &amp; Beyond</a></li><li><ol class="section"><li><a href="es6 & beyond/foreword.html"><strong aria-hidden="true">8.1.</strong> Foreword</a></li><li><a href="es6 & beyond/ch1.html"><strong aria-hidden="true">8.2.</strong> Chapter 1: ES? Now &amp; Future</a></li><li><a href="es6 & beyond/ch2.html"><strong aria-hidden="true">8.3.</strong> Chapter 2: Syntax</a></li><li><a href="es6 & beyond/ch3.html"><strong aria-hidden="true">8.4.</strong> Chapter 3: Organization</a></li><li><a href="es6 & beyond/ch4.html"><strong aria-hidden="true">8.5.</strong> Chapter 4: Async Flow Control</a></li><li><a href="es6 & beyond/ch5.html"><strong aria-hidden="true">8.6.</strong> Chapter 5: Collections</a></li><li><a href="es6 & beyond/ch6.html"><strong aria-hidden="true">8.7.</strong> Chapter 6: API Additions</a></li><li><a href="es6 & beyond/ch7.html"><strong aria-hidden="true">8.8.</strong> Chapter 7: Meta Programming</a></li><li><a href="es6 & beyond/ch8.html"><strong aria-hidden="true">8.9.</strong> Chapter 8: Beyond ES6</a></li><li><a href="es6 & beyond/apA.html"><strong aria-hidden="true">8.10.</strong> Appendix A: Thank You's!</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">You don't know JS</h1>
+
+                        <div class="right-buttons">
+                            <a href="print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#you-dont-know-js-book-series" id="you-dont-know-js-book-series">You Don't Know JS (book series)</a></h1>
+<p>This is a series of books diving deep into the core mechanisms of the JavaScript language. The first edition of the series is now complete.</p>
+<p><a href="http://www.ebooks.com/1993212/you-don-t-know-js-up-going/simpson-kyle/"><img src="up %26 going/cover.jpg" width="75"></a> 
+<a href="http://www.ebooks.com/1647631/you-don-t-know-js-scope-closures/simpson-kyle/"><img src="scope %26 closures/cover.jpg" width="75"></a> 
+<a href="http://www.ebooks.com/1734321/you-don-t-know-js-this-object-prototypes/simpson-kyle/"><img src="this %26 object prototypes/cover.jpg" width="75"></a> 
+<a href="http://www.ebooks.com/1935541/you-don-t-know-js-types-grammar/simpson-kyle/"><img src="types %26 grammar/cover.jpg" width="75"></a> 
+<a href="http://www.ebooks.com/1977375/you-don-t-know-js-async-performance/simpson-kyle/"><img src="async %26 performance/cover.jpg" width="75"></a> 
+<a href="http://www.ebooks.com/2481820/you-don-t-know-js-es6-beyond/simpson-kyle/"><img src="es6 %26 beyond/cover.jpg" width="75"></a></p>
+<p>Please feel free to contribute to the quality of this content by submitting PR's for improvements to code snippets, explanations, etc. While typo fixes are welcomed, they will likely be caught through normal editing processes, and are thus not necessarily as important for this repository.</p>
+<p><strong>To read more about the motivations and perspective behind this book series, check out the <a href="preface.html">Preface</a>.</strong></p>
+<h2><a class="header" href="#titles" id="titles">Titles</a></h2>
+<ul>
+<li>Read online (free!): <a href="up%20&amp;%20going/README.html#you-dont-know-js-up--going">&quot;Up &amp; Going&quot;</a>, Published: <a href="http://www.ebooks.com/1993212/you-don-t-know-js-up-going/simpson-kyle/">Buy Now</a> in print, but the ebook format is free!</li>
+<li>Read online (free!): <a href="scope%20&amp;%20closures/README.html#you-dont-know-js-scope--closures">&quot;Scope &amp; Closures&quot;</a>, Published: <a href="http://www.ebooks.com/1647631/you-don-t-know-js-scope-closures/simpson-kyle/">Buy Now</a></li>
+<li>Read online (free!): <a href="this%20&amp;%20object%20prototypes/README.html#you-dont-know-js-this--object-prototypes">&quot;this &amp; Object Prototypes&quot;</a>, Published: <a href="http://www.ebooks.com/1734321/you-don-t-know-js-this-object-prototypes/simpson-kyle/">Buy Now</a></li>
+<li>Read online (free!): <a href="types%20&amp;%20grammar/README.html#you-dont-know-js-types--grammar">&quot;Types &amp; Grammar&quot;</a>, Published: <a href="http://www.ebooks.com/1935541/you-don-t-know-js-types-grammar/simpson-kyle/">Buy Now</a></li>
+<li>Read online (free!): <a href="async%20&amp;%20performance/README.html#you-dont-know-js-async--performance">&quot;Async &amp; Performance&quot;</a>, Published: <a href="http://www.ebooks.com/1977375/you-don-t-know-js-async-performance/simpson-kyle/">Buy Now</a></li>
+<li>Read online (free!): <a href="es6%20&amp;%20beyond/README.html#you-dont-know-js-es6--beyond">&quot;ES6 &amp; Beyond&quot;</a>, Published: <a href="http://www.ebooks.com/2481820/you-don-t-know-js-es6-beyond/simpson-kyle/">Buy Now</a></li>
+</ul>
+<h2><a class="header" href="#publishing" id="publishing">Publishing</a></h2>
+<p>These books are being released here as drafts, free to read, but are also being edited, produced, and published through O'Reilly.</p>
+<p>If you like the content you find here, and want to support more content like it, please purchase the books once they are available for sale, through your normal book sources. :)</p>
+<p>If you'd like to contribute financially towards the effort (or any of my other OSS work) aside from purchasing the books, I do have a <a href="https://www.patreon.com/getify">patreon</a> that I would always appreciate your generosity towards.</p>
+<p><a href="https://www.patreon.com/getify"><a href="https://www.patreon.com/getify"><img src="https://c5.patreon.com/external/logo/become_a_patron_button.png" alt="patreon.png" /></a></a></p>
+<h2><a class="header" href="#in-person-training" id="in-person-training">In-person Training</a></h2>
+<p>The content for these books derives heavily from a series of training materials I teach professionally (in both public and private-corporate workshop format): &quot;Deep JavaScript Foundations&quot;, &quot;Rethinking Async&quot;, and &quot;ES6: The Right Parts&quot; workshops.</p>
+<p>If you like this content and would like to contact me regarding conducting training on these, or other various JS/HTML5/node.js topics, please reach out to me through email: getify @ gmail</p>
+<h2><a class="header" href="#online-video-training" id="online-video-training">Online Video Training</a></h2>
+<p>I also have some JS training material available in on-demand video format. I teach courses through <a href="https://FrontendMasters.com">Frontend Masters</a>, like my <a href="https://frontendmasters.com/courses/javascript-foundations/">Deep JavaScript Foundations</a> workshop. You can find <a href="https://frontendmasters.com/kyle-simpson/">all my courses here</a>.</p>
+<p>Some of those courses are also distributed on other platforms, like Pluralsight, Lynda.com, and O'Reilly Safari Online.</p>
+<h2><a class="header" href="#contributions" id="contributions">Contributions</a></h2>
+<p>Any contributions you make to this effort <strong>are of course greatly appreciated</strong>.</p>
+<p>But <strong>PLEASE</strong> read the <a href="CONTRIBUTING.html">Contributions Guidelines</a> carefully before submitting a PR.</p>
+<h2><a class="header" href="#license--copyright" id="license--copyright">License &amp; Copyright</a></h2>
+<p>The materials herein are all © 2013-2018 Kyle Simpson.</p>
+<p><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivs 4.0 Unported License</a>.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+
+                        
+                            <a rel="next" href="preface.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+
+                
+                    <a href="preface.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>
